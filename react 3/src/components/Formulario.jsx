@@ -8,7 +8,6 @@ const Formulario = ({ lista, setLista, setError, setSucces }) => {
         evento.preventDefault()
         if (!form.nombre || !form.correo || !form.edad || !form.cargo || !form.telefono) {
             setError("Los campos no pueden estar vacios")
-            console.log("error")
             setSucces("")
             return
         } else {

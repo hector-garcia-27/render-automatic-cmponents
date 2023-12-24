@@ -15,7 +15,7 @@ function App() {
     <>
       <Buscador/>
       <Listado lista={lista}/>
-      <AlertComponent/>
+      <AlertComponent error={error} succes={succes}/>
       <Formulario setLista={setLista} lista={lista} setError={setError} setSucces={setSucces}/>
     </>
   )
