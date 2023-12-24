@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 
-const Formulario = ({ lista, setLista, setError, setSucces }) => {
+const Formulario = ({ lista, setLista, setError, setSucces, setMantenerLista }) => {
   const [form, setForm] = useState({})
     
     const agregarColaborador = (evento) => {
@@ -13,6 +13,7 @@ const Formulario = ({ lista, setLista, setError, setSucces }) => {
         } else {
             const nuevaBase = [...lista, form];
             setLista(nuevaBase)
+            setMantenerLista(nuevaBase)
             setForm({ id: "", nombre: "", correo: "", edad: "", cargo: "", telefono: "" })
             setError("")
             setSucces("El Colaborador se ha agregado con exito")

@@ -9,14 +9,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   const [lista, setLista] = useState(baseColaboradores)
+  const [mantenerLista, setMantenerLista] = useState(lista)
   const [error, setError] = useState("")
   const [succes, setSucces] = useState("")
   return (
     <>
-      <Buscador/>
+      <Buscador setLista={setLista} lista={lista} mantenerLista={mantenerLista}/>
       <Listado lista={lista}/>
       <AlertComponent error={error} succes={succes}/>
-      <Formulario setLista={setLista} lista={lista} setError={setError} setSucces={setSucces}/>
+      <Formulario setMantenerLista={setMantenerLista} setLista={setLista} lista={lista} setError={setError} setSucces={setSucces}/>
     </>
   )
 }
