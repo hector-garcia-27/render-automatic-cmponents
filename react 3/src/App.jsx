@@ -4,13 +4,15 @@ import Buscador from './components/Buscador'
 import Formulario from './components/Formulario'
 import Listado from './components/Listado'
 import { baseColaboradores } from './baseColaboradores'
+import { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
-
+  const [lista, setLista] = useState(baseColaboradores)
   return (
     <>
       <Buscador/>
-      <Listado baseColaboradores={baseColaboradores}/>
+      <Listado lista={lista}/>
       <AlertComponent/>
       <Formulario/>
     </>
