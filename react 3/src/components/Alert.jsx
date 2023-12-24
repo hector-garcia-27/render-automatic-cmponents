@@ -1,8 +1,11 @@
-import React from 'react'
+import Alert from 'react-bootstrap/Alert';
 
-const AlertComponent = () => {
+const AlertComponent = ({ error, succes }) => {
   return (
-    <div>Alert</div>
+    <>
+      {error.length > 0 && <Alert variant="danger">{error}</Alert>}
+      {succes.length > 0 && <Alert variant="success">{succes}</Alert>}
+    </>
   )
 }
 
