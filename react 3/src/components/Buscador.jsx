@@ -23,8 +23,7 @@ const Buscador = ({ lista, setLista, mantenerLista }) => {
     }
     return (
         <>
-            <input type="text" placeholder="Buscar" onChange={(e) => filtrarTabla(e.target.value)} />
-            <button >buscar</button>
+            <input type="text" placeholder="Busca un colaborador" onChange={(e) => filtrarTabla(e.target.value)} />
         </>
     )
 }

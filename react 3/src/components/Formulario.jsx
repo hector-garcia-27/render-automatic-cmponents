@@ -25,13 +25,13 @@ const Formulario = ({ lista, setLista, setError, setSucces, setMantenerLista }) 
         console.log(form)
     }
     return (
-        <form className='d-flex flex-column gap-1' onSubmit={agregarColaborador}>
+        <form className='d-flex flex-column gap-2' onSubmit={agregarColaborador}>
             <input onChange={capturaInput} name='nombre' value={form.nombre} type="text" placeholder='Nombre' />
             <input onChange={capturaInput} name='correo' value={form.correo} type="text" placeholder='tucorreo@example.com' />
             <input onChange={capturaInput} name='edad' value={form.edad} type="text" placeholder='Edad' />
             <input onChange={capturaInput} name='cargo' value={form.cargo} type="text" placeholder='Cargo' />
             <input onChange={capturaInput} name='telefono' value={form.telefono} type="text" placeholder='Telefono' />
-            <Button variant="outline-success" type='submit'>Agregar colaborador</Button>
+            <Button variant="primary" type='submit'>Agregar colaborador</Button>
         </form>
     )
 }

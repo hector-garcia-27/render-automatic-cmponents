@@ -3,7 +3,7 @@ import Table from 'react-bootstrap/Table';
 const Listado = ({lista}) => {
     return (
         <>
-            <Table className='table-sm table-striped'>
+            <Table responsive className='table-sm table-striped'>
                 <thead>
                     <tr>
                         <th>Nombre</th>

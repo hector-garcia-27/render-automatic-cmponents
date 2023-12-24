@@ -13,12 +13,18 @@ function App() {
   const [error, setError] = useState("")
   const [succes, setSucces] = useState("")
   return (
-    <>
+    <div className='requerimiento gap-3'>
+    <div className='d-flex flex-column gap-2'>
+      <h1>Lista de colaboradores</h1>
       <Buscador setLista={setLista} lista={lista} mantenerLista={mantenerLista}/>
       <Listado lista={lista}/>
-      <AlertComponent error={error} succes={succes}/>
+    </div>
+    <div className='d-flex flex-column gap-2'>
+      <h3>Agregar colaborador</h3>
       <Formulario setMantenerLista={setMantenerLista} setLista={setLista} lista={lista} setError={setError} setSucces={setSucces}/>
-    </>
+      <AlertComponent error={error} succes={succes}/>
+    </div>
+    </div>
   )
 }
 
